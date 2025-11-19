@@ -74,6 +74,22 @@ nav a:hover {
     opacity: 0;
     animation: fadeIn 1.2s ease forwards;
 }
+.logo {
+    width: 220px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Crece un poquito */
+}
+.logo:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+}
 
 
 /* Keyframes generales */
