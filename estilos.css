@@ -9,24 +9,20 @@ body {
 /* HEADER */
 header {
     background-color: #000;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
-    width: 220px;
+/* LOGO */
+.logo img {
+    width: 180px;
     height: auto;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
-    transition: transform 0.4s ease;
-}
-
-.logo:hover {
-    transform: scale(1.07);
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+    display: block;
 }
 
 /* NAV DESKTOP */
@@ -47,7 +43,7 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* HAMBURGER */
+/* HAMBURGER BUTTON */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -62,27 +58,25 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* MOBILE NAV MENU */
+/* MOBILE MENU */
 #menu {
     display: flex;
     gap: 20px;
 }
 
 @media (max-width: 768px) {
-
-    /* Ocultar nav normal */
-    #menu {
+    nav {
+        flex-direction: column;
+        background: #000;
         position: absolute;
         top: 80px;
         right: 20px;
-        background: #000;
         padding: 15px;
-        border-radius: 8px;
-        flex-direction: column;
+        border-radius: 10px;
         display: none;
     }
 
-    #menu.open {
+    nav.open {
         display: flex;
     }
 
@@ -93,7 +87,7 @@ nav a:hover {
 
 /* SECTIONS */
 .section {
-    padding: 40px;
+    padding: 50px 30px;
 }
 
 h1, h2 {
@@ -104,27 +98,7 @@ p, li {
     color: #bbb;
 }
 
-/* GRID SERVICIOS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    background: #333;
-}
-
-/* SOCIAL */
+/* SOCIAL LINKS */
 .social a {
     color: #ccc;
     margin-right: 15px;
@@ -143,7 +117,7 @@ footer {
     color: #777;
 }
 
-/* ANIMACIÓN */
+/* ANIMATION */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -156,3 +130,4 @@ footer {
         transform: translateY(0);
     }
 }
+
