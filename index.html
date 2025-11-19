@@ -1,86 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kintsugui Studio</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <img src="logo.png" alt="Logo Kintsugui Studio" class="logo" />
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Kintsugui Studio">
+    </div>
 
-        <!-- Menú -->
-        <nav id="menu">
-            <a href="#servicios">Servicios</a>
-            <a href="#portafolio">Portafolio</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
 
-        <!-- Botón hamburguesa -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
+    <!-- Menú -->
+    <nav id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-    <!-- Hero -->
-    <section class="hero fade-in">
-        <h1>Kintsugui Studio</h1>
-        <p>Diseño gráfico y textil especializado en sublimación digital.</p>
-    </section>
+<!-- INICIO -->
+<section id="inicio" class="section fade-in">
+    <h1>Bienvenido a Kintsugui Studio</h1>
+    <p>Ilustración • Diseño • Creatividad</p>
+</section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="section fade-in">
-        <h2>Servicios</h2>
+<!-- SERVICIOS -->
+<section id="servicios" class="section fade-in">
+    <h2>Servicios</h2>
+    <ul>
+        <li>Ilustraciones personalizadas</li>
+        <li>Diseño digital</li>
+        <li>Arte conceptual</li>
+    </ul>
+</section>
 
-        <div class="grid">
-            <div class="card">Sublimación digital textil</div>
-            <div class="card">Diseño gráfico personalizado</div>
-            <div class="card">Creación de plantillas y mockups</div>
-            <div class="card">Identidad visual y branding</div>
-            <div class="card">Diseño para productos personalizados</div>
-        </div>
-    </section>
+<!-- PORTAFOLIO -->
+<section id="portafolio" class="section fade-in">
+    <h2>Portafolio</h2>
+    <p>(Muy pronto… agrega aquí tus imágenes cuando las tengas)</p>
+    <div class="portafolio-grid"></div>
+</section>
 
-    <!-- Portafolio -->
-    <section id="portafolio" class="section fade-in">
-        <h2>Portafolio</h2>
-        <p>(Muy pronto… agrega aquí tus imágenes cuando las tengas)</p>
-        <div class="portafolio-grid"></div>
-    </section>
+<!-- CONTACTO -->
+<section id="contacto" class="section fade-in">
+    <h2>Contacto</h2>
+    <p>Para proyectos y consultas:</p>
+    <p>Email: <strong>kintsuguistudio23@gmail.com</strong></p>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section fade-in">
-        <h2>Contacto</h2>
-        <p>Para proyectos y consultas:</p>
-        <p>Email: <strong>kintsuguistudio23@gmail.com</strong></p>
+    <div class="social">
+        <a href="https://www.instagram.com/kintsuguistudio23/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/kintsuguistudio/" target="_blank">Facebook</a>
+    </div>
+</section>
 
-        <div class="social">
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">Facebook</a>
-        </div>
-    </section>
+<footer>
+    © 2024 Kintsugui Studio
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        © 2024 Kintsugui Studio
-    </footer>
-
-    <!-- Script menú -->
-    <script>
-        function toggleMenu() {
-            document.getElementById("menu").classList.toggle("open");
-            document.querySelector(".hamburger").classList.toggle("active");
-        }
-    </script>
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+    document.querySelector(".hamburger").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-
