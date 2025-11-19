@@ -1,183 +1,21 @@
-/* ---------------------- */
-/* ESTILOS GENERALES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* GENERAL */
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #fafafa;
-    color: #222;
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #ddd;
 }
 
-/* ---------------------- */
-/* ENCABEZADO */
+/* HEADER */
 header {
-    width: 100%;
-    padding: 15px 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    height: 55px;
-}
-
-/* NAV */
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #b48b55;
-}
-
-/* ---------------------- */
-/* HERO */
-.hero {
-    height: 80vh;
-    background: url("fondo.jpg") no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    margin-top: 70px;
-}
-
-.hero h1 {
-    font-size: 3.2rem;
-    letter-spacing: 2px;
-    color: #222;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #555;
-}
-
-/* ---------------------- */
-/* SECCIONES */
-.section {
-    padding: 80px 40px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #b48b55;
-}
-
-/* ---------------------- */
-/* CARDS DE SERVICIOS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    font-weight: 600;
-    color: #444;
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-/* ---------------------- */
-/* PORTAFOLIO */
-.portafolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* ---------------------- */
-/* CONTACTO */
-.social a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #b48b55;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.social a:hover {
-    text-decoration: underline;
-}
-
-/* ---------------------- */
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #111;
-    color: white;
-    margin-top: 40px;
-}
-
-/* ---------------------- */
-/* ANIMACIÓN FADE-IN */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fade 1s ease forwards;
-}
-
-@keyframes fade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ---------------------- */
-/* RESPONSIVE MENU (MÓVIL) */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-}
-
-/* ----- MENÚ RESPONSIVE ----- */
-
-/* Contenedor del header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
     background-color: #000;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-/* LOGO */
 .logo {
     width: 220px;
     height: auto;
@@ -191,7 +29,7 @@ header {
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
 }
 
-/* NAV normal (PC) */
+/* NAV DESKTOP */
 nav {
     display: flex;
     gap: 20px;
@@ -201,7 +39,7 @@ nav a {
     color: #ccc;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
@@ -209,56 +47,43 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* ----- HAMBURGER BUTTON ----- */
+/* HAMBURGER */
 .hamburger {
-    width: 30px;
-    height: 22px;
     display: none;
     flex-direction: column;
-    justify-content: space-between;
     cursor: pointer;
 }
 
 .hamburger span {
-    display: block;
-    height: 4px;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
     background: #fff;
-    border-radius: 4px;
     transition: 0.3s;
 }
 
-/* ANIMACIÓN del ícono al abrir */
-.hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+/* MOBILE NAV MENU */
+#menu {
+    display: flex;
+    gap: 20px;
 }
 
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-
-/* ----- MENÚ MÓVIL ----- */
 @media (max-width: 768px) {
 
-    nav {
+    /* Ocultar nav normal */
+    #menu {
         position: absolute;
         top: 80px;
-        right: 0;
-        width: 180px;
+        right: 20px;
+        background: #000;
+        padding: 15px;
+        border-radius: 8px;
         flex-direction: column;
-        background: #111;
-        padding: 20px;
-        border-left: 1px solid #444;
-        border-bottom: 1px solid #444;
         display: none;
     }
 
-    nav.open {
+    #menu.open {
         display: flex;
-        animation: fadeIn 0.5s ease forwards;
     }
 
     .hamburger {
@@ -266,7 +91,65 @@ nav a:hover {
     }
 }
 
-/* Animaciones */
+/* SECTIONS */
+.section {
+    padding: 40px;
+}
+
+h1, h2 {
+    color: #eee;
+}
+
+p, li {
+    color: #bbb;
+}
+
+/* GRID SERVICIOS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #333;
+}
+
+/* SOCIAL */
+.social a {
+    color: #ccc;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #777;
+}
+
+/* ANIMACIÓN */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
