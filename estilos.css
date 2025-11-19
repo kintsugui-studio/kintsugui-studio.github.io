@@ -1,3 +1,6 @@
+/* ============================
+   ESTILOS GENERALES
+============================ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,31 +8,6 @@ body {
     color: #ddd;
 }
 
-/* Header */
-header {
-    background-color: #000;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img {
-    height: 60px;
-}
-
-nav a {
-    color: #ccc;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-/* Sections */
 section {
     padding: 40px;
 }
@@ -42,45 +20,55 @@ p, li {
     color: #bbb;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
+/* ============================
+   HEADER / MENÚ
+============================ */
+header {
     background-color: #000;
-    color: #777;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-/* Animación suave al aparecer */
+
+nav a {
+    color: #ccc;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ============================
+   LOGO ANIMADO
+============================ */
+.logo {
+    width: 220px;        /* Ajusta aquí el tamaño */
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+}
+
+/* ============================
+   ANIMACIONES
+============================ */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s ease-out forwards;
 }
 
-/* Animación de navegación */
-nav a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav a:hover {
-    color: #bbb;
-    transform: translateY(-3px);
-}
-
-/* Logo suave */
-.logo {
-    width: 220px;     /* Ajusta el tamaño aquí 200–250 */
-    height: auto;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
-    transition: transform 0.4s ease; /* Suavidad */
-}
-
-.logo:hover {
-    transform: scale(1.07); /* Efecto de agrandar */
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3)); /* Brillo suave */
-}
-
-/* Animación general */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -88,3 +76,12 @@ nav a:hover {
     }
 }
 
+/* ============================
+   FOOTER
+============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #777;
+}
