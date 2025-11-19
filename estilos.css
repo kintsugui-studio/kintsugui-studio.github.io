@@ -1,20 +1,4 @@
 /* GENERAL */
-width: 30px;
-height: 3px;
-background: #fff;
-margin: 4px 0;
-}
-
-
-/* MENÚ EN MÓVIL */
-@media (max-width: 768px) {
-
-
-.logo img {
-width: 300px; /* Tamaño ideal móvil */
-}
-
-
 nav {
 display: none;
 flex-direction: column;
