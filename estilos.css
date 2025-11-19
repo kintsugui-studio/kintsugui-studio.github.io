@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: #ddd;
+    scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -18,16 +19,22 @@ header {
     z-index: 1000;
 }
 
-/* LOGO (AJUSTADO) */
+/* LOGO (Opción A) */
 .logo img {
-    width: 140px;      /* tamaño perfecto */
+    width: 280px;      /* Tamaño perfecto para PC */
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 180px;  /* Tamaño perfecto para móvil */
+    }
 }
 
 /* NAV DESKTOP */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
@@ -35,6 +42,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease;
+    font-size: 15px;
 }
 
 nav a:hover {
@@ -42,7 +50,7 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* BOTÓN DE HAMBURGUESA */
+/* HAMBURGUESA */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -58,22 +66,18 @@ nav a:hover {
 }
 
 /* MENÚ MÓVIL */
-#menu {
-    display: flex;
-    gap: 20px;
-}
-
-/* MOBILE */
 @media (max-width: 768px) {
+
+    /* Oculta menú en móvil */
     nav {
+        display: none;
         flex-direction: column;
         background: #000;
         position: absolute;
-        top: 80px;
+        top: 70px;
         right: 20px;
         padding: 15px;
         border-radius: 10px;
-        display: none;
     }
 
     nav.open {
@@ -87,7 +91,7 @@ nav a:hover {
 
 /* SECCIONES */
 .section {
-    padding: 50px 30px;
+    padding: 60px 30px;
 }
 
 h1, h2 {
@@ -98,7 +102,7 @@ p, li {
     color: #bbb;
 }
 
-/* ENLACES A REDES SOCIALES */
+/* SOCIAL */
 .social a {
     color: #ccc;
     margin-right: 15px;
@@ -107,15 +111,6 @@ p, li {
 
 .social a:hover {
     color: #fff;
-}
-
-/* EMAIL */
-.email {
-    color: #88c7ff;
-    text-decoration: none;
-}
-.email:hover {
-    color: #b8e1ff;
 }
 
 /* FOOTER */
@@ -139,5 +134,4 @@ footer {
         transform: translateY(0);
     }
 }
-
 
